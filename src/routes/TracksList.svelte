@@ -25,7 +25,7 @@
         <img class="h-16" src="{pepesitjam}" alt="jammin">
     </div>
     <h1 class="mb-12">
-        Лог треков
+        История треков
     </h1>
 
     <div class="w-100 flex items-center flex-col">
