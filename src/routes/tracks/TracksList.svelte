@@ -2,7 +2,7 @@
     import pepesitjam from "$lib/images/pepesitjam.gif";
     import {onMount} from "svelte";
     import TrackListTile from "./TrackListTile.svelte";
-    import type {Track} from "$lib/types";
+    import type {Track} from "$lib/types.d";
 
     const endpoint = "https://trovo.bullbulk.ru/items/tracks";
 
