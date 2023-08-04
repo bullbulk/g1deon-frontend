@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-    <title>G1deon</title>
-    <meta name="description" content="G1deon website"/>
+    <title>История треков</title>
+    <meta name="description" content="История треков"/>
 </svelte:head>
 
 <section>

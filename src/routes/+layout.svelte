@@ -6,6 +6,11 @@
     import Header from './Header.svelte';
 </script>
 
+<svelte:head>
+    <title>G1deon</title>
+    <meta name="description" content="G1deon"/>
+</svelte:head>
+
 <div class="app">
     <Header/>
 
