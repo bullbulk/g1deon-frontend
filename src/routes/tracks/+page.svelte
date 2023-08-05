@@ -15,7 +15,7 @@
   section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     flex-grow: 0.6;
   }
 </style>
