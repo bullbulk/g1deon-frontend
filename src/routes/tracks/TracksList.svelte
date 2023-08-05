@@ -5,7 +5,7 @@
     import type {Track} from "$lib/types.d";
     import {API_URL} from "$lib/config";
     import {linear} from "svelte/easing"
-    import {fade} from "svelte/transition"
+    import {flip} from "svelte/animate";
 
     const endpoint = `${API_URL}/items/tracks`;
 
@@ -23,11 +23,12 @@
 
     setInterval(getTracks, 5000);
 
-    function slideIn(node: Element, {delay = 0, duration = 500}) {
+    function slideIn(node: Element, {delay = 0, duration = 500, easing = linear}) {
         return {
             duration,
             css: (t: number) => {
-                return `transform: translateY(-${70 - linear(t) * 100}%); opacity: ${linear(t) * 100}%;`
+                const eased = easing(t);
+                return `transform: translateY(-${70 - eased * 100}%); opacity: ${eased * 100}%;`
             }
         };
     }
@@ -35,7 +36,7 @@
 
 <div class="w-100 flex flex-col justify-start">
     <div class="flex h-16 justify-center mb-4">
-        <img class="h-16" src="{pepesitjam}" alt="jammin">
+        <img alt="jammin" class="h-16" src="{pepesitjam}">
     </div>
     <h1 class="mb-12">
         История треков
@@ -44,8 +45,10 @@
     <div class="flex-1 w-100 flex flex-col">
         <div class="w-100 px-1 md:px-12 lg:px-20 tracks-list">
             {#each tracksList as track (track.id)}
-                <div transition:slideIn={{duration:400}} class="smooth-move track-row">
-                    <TrackListTile {...track}/>
+                <div class="track-row"
+                     transition:slideIn={{duration:400}}
+                     animate:flip={{duration: 200, easing: linear}}>
+                    <TrackListTile {track}/>
                 </div>
             {/each}
         </div>
