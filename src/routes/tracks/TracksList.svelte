@@ -3,8 +3,9 @@
     import {onMount} from "svelte";
     import TrackListTile from "./TrackListTile.svelte";
     import type {Track} from "$lib/types.d";
+    import {API_URL} from "$lib/config";
 
-    const endpoint = "https://trovo.bullbulk.ru/items/tracks";
+    const endpoint = `${API_URL}/items/tracks`;
 
 
     let tracksList: Array<Track> = [];
