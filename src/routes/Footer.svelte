@@ -1,5 +1,5 @@
 <footer>
-    <p>By <a href="https://github.com/bullbulk">bullbulk</a></p>
+    <p>By <a class="text" href="https://github.com/bullbulk">bullbulk</a></p>
 </footer>
 
 <style>

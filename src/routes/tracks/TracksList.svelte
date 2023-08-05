@@ -29,7 +29,7 @@
     </h1>
 
     <div class="w-100 flex items-center flex-col">
-        <div class="md:w-2/3 w-100 tracks-list">
+        <div class="w-100 px-2 md:px-12 lg:px-16 tracks-list">
             {#each tracksList as track}
                 <div class="track-row">
                     <TrackListTile {...track}/>
@@ -47,6 +47,6 @@
   }
 
   .tracks-list > .track-row:not(:last-child) {
-    border-bottom: solid 1px rgb(116, 122, 131);
+    border-bottom: solid 1px var(--color-separator);
   }
 </style>

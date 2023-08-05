@@ -10,6 +10,8 @@
   --color-theme-1: #ff3e00;
   --color-theme-2: #4075a6;
   --color-text: white;
+  --color-separator: rgb(96, 100, 108);
+  --color-separator-accent: rgb(42, 43, 47);
   --column-width: 42rem;
   --column-margin-top: 4rem;
   font-family: var(--font-body);
@@ -33,12 +35,12 @@ p {
   line-height: 1.5;
 }
 
-a {
+a.text {
   color: var(--color-theme-1);
   text-decoration: none;
 }
 
-a:hover {
+a.text:hover {
   text-decoration: underline;
 }
 

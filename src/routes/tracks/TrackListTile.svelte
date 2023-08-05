@@ -9,29 +9,40 @@
     let date_created_at = new Date(created_at);
 </script>
 
-<div class="track-tile py-4 flex sm:gap-5 lg:gap-10">
+
+<div class="track-tile py-4 flex gap-5 lg:gap-10">
     <div class="flex-1 flex flex-col gap-1 justify-between">
-        <div class="text-md sm:text-xl"><b>{title}</b></div>
+        <div class="text-sm sm:text-xl"><b>{title}</b></div>
         <div class="text-sm text-gray-400">{owner}</div>
     </div>
-    <div class="flex flex-col justify-start sm:justify-center sm:flex-row gap-1 sm:gap-5 lg:gap-10">
-        <div class="flex flex-col items-end sm:items-center">
-            <div class="text-md">
-                {date_created_at.toLocaleTimeString("ru-RU", {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                })}
+    <a href="{url}" target="_blank">
+        <div class="left-separator !pl-6 sm:!pl-0 sm:!border-none flex flex-col h-fit justify-start sm:justify-center sm:flex-row gap-1 sm:gap-5">
+            <div class="left-separator !border-0 sm:!border-l-[1px] !pl-0 sm:!pl-8 flex flex-col items-end sm:items-center">
+                <div class="text-sm sm:text-md">
+                    <b>
+                        {date_created_at.toLocaleTimeString("ru-RU", {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                        })}
+                    </b>
+                </div>
+                <div class="text-sm text-gray-400">{date_created_at.toLocaleDateString("ru-RU", {
+                    year: 'numeric',
+                    month: 'numeric',
+                    day: 'numeric',
+                })}</div>
             </div>
-            <div class="text-sm text-gray-400">{date_created_at.toLocaleDateString("ru-RU", {
-                year: 'numeric',
-                month: 'numeric',
-                day: 'numeric',
-            })}</div>
+            <div class="flex justify-end sm:justify-center">
+                <img class="w-10 sm:w-14 h-fit" src="{youtube_logo}" alt="YT Link">
+            </div>
         </div>
-        <div class="flex justify-end sm:justify-center">
-            <a href="{url}" target="_blank">
-                <img class="w-10 sm:w-14" src="{youtube_logo}" alt="YT Link">
-            </a>
-        </div>
-    </div>
+    </a>
 </div>
+
+
+<style>
+    .left-separator {
+        border-left: solid 1px var(--color-separator-accent);
+        padding-left: 2rem;
+    }
+</style>
