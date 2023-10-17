@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link
-				href="%sveltekit.assets%/favicon-light.png"
-				rel="icon"
-				media="(prefers-color-scheme: light)"
-		/>
-		<link
-				href="%sveltekit.assets%/favicon-dark.png"
-				rel="icon"
-				media="(prefers-color-scheme: dark)"
-		/>
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66LL50NC1F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-66LL50NC1F');
+    </script>
+
+    <meta charset="utf-8"/>
+    <link
+            href="%sveltekit.assets%/favicon-light.png"
+            rel="icon"
+            media="(prefers-color-scheme: light)"
+    />
+    <link
+            href="%sveltekit.assets%/favicon-dark.png"
+            rel="icon"
+            media="(prefers-color-scheme: dark)"
+    />
+    <meta name="viewport" content="width=device-width"/>
+    %sveltekit.head%
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">%sveltekit.body%</div>
+</body>
 </html>
