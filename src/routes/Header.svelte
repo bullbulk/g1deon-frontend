@@ -8,12 +8,21 @@
             <img src={logo} alt="G1deon"/>
         </a>
     </div>
+
+    <nav class="w-100">
+        <ul class="flex gap-10 px-10">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/tracks">История треков</a></li>
+            <li><a href="/mana">Топ по мане</a></li>
+            <li><a href="/rating">Рейтинг</a></li>
+        </ul>
+    </nav>
 </header>
 
 <style>
     header {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
     }
 
     .corner {
