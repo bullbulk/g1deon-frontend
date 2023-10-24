@@ -15,6 +15,6 @@ WORKDIR /app
 COPY --from=build /app .
 
 ENV HOST=0.0.0.0
-ENV PORT=9001
-EXPOSE 9001
+ENV PORT=80
+EXPOSE 80
 CMD ["node", "build"]
