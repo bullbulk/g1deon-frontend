@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  svelte:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - 5173:5173
+      - 24678:24678
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app
+          ignore:
+            - node_modules/
+    restart: unless-stopped

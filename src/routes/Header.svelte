@@ -1,5 +1,6 @@
 <script>
     import logo from '$lib/images/g1deon-logo.svg';
+    import Nav from "$lib/components/Nav.svelte";
 </script>
 
 <header>
@@ -9,13 +10,8 @@
         </a>
     </div>
 
-    <nav class="w-100">
-        <ul class="flex gap-10 px-10">
-            <li><a href="/">Главная</a></li>
-            <li><a href="/tracks">История треков</a></li>
-            <li><a href="/mana">Топ по мане</a></li>
-            <li><a href="/rating">Рейтинг</a></li>
-        </ul>
+    <nav class="w-100 px-10">
+        <Nav/>
     </nav>
 </header>
 
@@ -23,6 +19,10 @@
     header {
         display: flex;
         align-items: center;
+        position: fixed;
+        width: 100%;
+        background-color: var(--color-bg-0);
+        height: 5rem;
     }
 
     .corner {

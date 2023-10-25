@@ -88,3 +88,15 @@ button:focus:not(:focus-visible) {
     font-size: 2.4rem;
   }
 }
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-child {
+    height: calc(100vh - 5rem);
+    margin-top: 5rem;
+  }
+}

@@ -8,7 +8,7 @@
 
 <svelte:head>
     <title>G1deon</title>
-    <meta name="description" content="G1deon"/>
+    <meta content="G1deon" name="description"/>
 </svelte:head>
 
 <div class="app">
@@ -17,9 +17,9 @@
     <main>
         <slot/>
     </main>
-
-    <Footer/>
 </div>
+
+<Footer/>
 
 <style>
     .app {
