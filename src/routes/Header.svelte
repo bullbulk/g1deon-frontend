@@ -6,13 +6,11 @@
 <header>
     <div class="corner">
         <a href="https://trovo.live/s/G1deonTV" target="_blank">
-            <img src={logo} alt="G1deon"/>
+            <img alt="G1deon" src={logo}/>
         </a>
     </div>
 
-    <nav class="w-100 px-10">
-        <Nav/>
-    </nav>
+    <Nav/>
 </header>
 
 <style>
