@@ -1,16 +1,36 @@
 <script>
-    import logo from '$lib/images/g1deon-logo.svg';
     import Nav from "$lib/components/Nav.svelte";
+    import MainLogo from "$lib/components/MainLogo.svelte";
+
+    import header_youtube from '$lib/images/header-youtube.svg';
+    import header_trovo from '$lib/images/header-trovo.svg';
+    import header_vk from '$lib/images/header-vk.svg';
 </script>
 
-<header>
-    <div class="corner">
-        <a href="https://trovo.live/s/G1deonTV" target="_blank">
-            <img alt="G1deon" src={logo}/>
-        </a>
-    </div>
+<header class="p-6">
+    <MainLogo/>
 
     <Nav/>
+
+    <div class="socials">
+        <div class="px-12 flex gap-5 justify-end items-center">
+            <div class="socials__item">
+                <a href="https://trovo.live/s/G1deonTV" target="_blank">
+                    <img alt="Trovo G1deon" src="{header_trovo}">
+                </a>
+            </div>
+            <div class="socials__item">
+                <a href="https://youtube.com/G1deon" target="_blank">
+                    <img alt="YouTube G1deon" src="{header_youtube}">
+                </a>
+            </div>
+            <div class="socials__item">
+                <a href="https://vk.com/gideoncherez1" target="_blank">
+                    <img alt="VK G1deon" src="{header_vk}">
+                </a>
+            </div>
+        </div>
+    </div>
 </header>
 
 <style>
@@ -20,26 +40,6 @@
         position: fixed;
         width: 100%;
         background-color: var(--color-bg-0);
-        height: 5rem;
-    }
-
-    .corner {
-        margin: 0.5rem;
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .corner a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .corner img {
-        width: 3rem;
-        height: 3rem;
-        object-fit: contain;
+        height: var(--header-height);
     }
 </style>

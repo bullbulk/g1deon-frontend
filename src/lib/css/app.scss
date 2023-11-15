@@ -14,6 +14,9 @@
   --color-separator-accent: rgb(42, 43, 47);
   --column-width: 42rem;
   --column-margin-top: 4rem;
+
+  --header-height: 5rem;
+
   font-family: var(--font-body);
   color: var(--color-text);
 }
@@ -96,8 +99,8 @@ section {
   align-items: center;
 
   &:first-child {
-    height: calc(100vh - 5rem);
-    margin-top: 5rem;
+    height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
   }
 }
 
@@ -105,4 +108,25 @@ nav ul {
   color: var(--color-separator);
   font-size: 1rem;
   font-weight: bold;
+
+  & li:hover {
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.socials {
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  &__item {
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.1s ease-in-out;
+    }
+
+    & img {
+      width: 2rem;
+    }
+  }
 }
