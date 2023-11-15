@@ -8,11 +8,7 @@ services:
     ports:
       - 5173:5173
       - 24678:24678
-    develop:
-      watch:
-        - action: sync
-          path: ./
-          target: /app
-          ignore:
-            - node_modules/
+    volumes:
+      - .:/app
+      - /app/node_modules
     restart: unless-stopped
